@@ -7,6 +7,7 @@ class Constant{
   static const String SELL = "Sell ";
   static const String LOGIN = "Log In";
   static const String SIGN_UP = "Sign Up";
+  static const String TURN_ON = "Turn on location services";
   static const String CONFIRM = "Confirm Payment";
   static const String TASK_SIGNUP = "Sign Up for task app";
   static const String WELCOMEBACK = "Welcome back!";
@@ -23,6 +24,7 @@ class Constant{
   static const String INPUTUSERNAME = "Username";
   static const String HOME_PAGE = "Home Page";
   static const String LOG_OUT = "logout";
+  static const String NIGERIA = "Nigeria";
   static const String SENT = "Money sent out successfully you can proceed to home page";
   static const String RESET_PASS = "reset password";
   static const String FORGET_PASS = "Forget Password";

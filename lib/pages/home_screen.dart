@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   TextButton(
                       onPressed: () {
-                        Get.toNamed(RouteHelper.getBankPage());
+                        Get.toNamed(RouteHelper.getWeatherPage());
                       },
                       child: Text(
                         Constant.GOTOWEATHER,

@@ -2,6 +2,7 @@ import 'package:authentication/controllers/home_controller.dart';
 import 'package:authentication/controllers/login_controller.dart';
 import 'package:authentication/controllers/signup_controller.dart';
 import 'package:authentication/controllers/splash_controller.dart';
+import 'package:authentication/controllers/weather_controller.dart';
 import 'package:authentication/db/hive/user_model.dart';
 import 'package:authentication/routes/route.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => LoginController()),
         ChangeNotifierProvider(create: (context) => SignupController()),
         ChangeNotifierProvider(create: (context) => HomeController()),
+        ChangeNotifierProvider(create: (context) => WeatherController()),
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,

@@ -8,6 +8,7 @@ import 'package:authentication/pages/splash/splash_screen.dart';
 import 'package:authentication/pages/transfers/confirmation_screen.dart';
 import 'package:authentication/pages/transfers/inter_transfer.dart';
 import 'package:authentication/pages/transfers/intra_transfer.dart';
+import 'package:authentication/pages/weather/wather_screen.dart';
 import 'package:get/get.dart';
 
 class RouteHelper{
@@ -22,6 +23,7 @@ class RouteHelper{
   static const String transfer = "/transfer";
   static const String confirm = "/confirm";
   static const String inter_transfer = "/inter_transfer";
+  static const String weather_page = "/weather_page";
 
 
   static String getInitialPage() => "$initial";
@@ -34,6 +36,7 @@ class RouteHelper{
   static String getTransferPage() => "$transfer";
   static String getConfirmPage() => "$confirm";
   static String getInterTransferPage() => "$inter_transfer";
+  static String getWeatherPage() => "$weather_page";
 
   static List<GetPage> routes = [
 
@@ -47,6 +50,7 @@ class RouteHelper{
     GetPage(name: transfer, page: () => const TransferPage(), transition: Transition.fade),
     GetPage(name: confirm, page: () => const ConfirmationScreen(), transition: Transition.fade),
     GetPage(name: inter_transfer, page: () => const IntraTransfer(), transition: Transition.fade),
+    GetPage(name: weather_page, page: () => const WeatherScreen(), transition: Transition.fade),
 
   ];
 

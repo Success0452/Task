@@ -1,7 +1,7 @@
 import 'package:authentication/server/http_routes.dart';
 import 'package:http/http.dart' as http;
 
-class Service {
+class Server {
   static final client = http.Client();
 
 
@@ -37,23 +37,19 @@ class Service {
     return response.body;
   }
 
-  static Future<dynamic> postWB(String endpoint, String token, String params) async {
+  static Future<dynamic> postWB(String endpoint, String params) async {
     var response = await client.post(
       buildUrl(endpoint, params),
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer $token"
-      },
     );
     return response.body;
   }
 
-  static Future<dynamic> get(String endpoint, String token, String params) async {
+  static Future<dynamic> get(String endpoint, String token, Map<String, String> params) async {
+    var url = Uri.http(HttpRoutes.BASE_URL, endpoint, params);
     var response = await client.get(
-        buildUrl(endpoint, params),
+        url,
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer $token"
         });
     return response.body;
   }
