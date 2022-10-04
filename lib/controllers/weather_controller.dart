@@ -14,7 +14,7 @@ class WeatherController extends ChangeNotifier{
   // declare a function/method to get weather info
   getWeatherInfo(String place) async{
     // declare query parameters needed by the api
-    final params = { 'key': '43419ec35c3d461da06222358220310', 'q': place};
+    final params = { 'key': '', 'q': place};
     // accept the response into a variable
     var response = await Server.get(HttpRoutes.CURRENT_WEATHER, '', params);
     // decode response into a variable
