@@ -1,3 +1,4 @@
+import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:authentication/controllers/home_controller.dart';
 import 'package:authentication/controllers/login_controller.dart';
 import 'package:authentication/controllers/signup_controller.dart';
@@ -12,6 +13,9 @@ import 'package:provider/provider.dart';
 
 
 void main() async{
+  // Be sure to add this line if initialize() call happens before runApp()
+  WidgetsFlutterBinding.ensureInitialized();
+  await AndroidAlarmManager.initialize();
   await Hive.initFlutter();
   Hive.registerAdapter(UserModelAdapter());
   await Hive.openBox<UserModel>("users");

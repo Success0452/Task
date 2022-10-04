@@ -1,5 +1,7 @@
 import 'package:authentication/controllers/home_controller.dart';
+import 'package:authentication/controllers/weather_controller.dart';
 import 'package:authentication/routes/route.dart';
+import 'package:authentication/services/local_notification.dart';
 import 'package:authentication/util/colors.dart';
 import 'package:authentication/util/constant.dart';
 import 'package:authentication/util/dimensions.dart';
@@ -17,10 +19,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   var remember = Hive.box("remember");
+
 
   @override
   Widget build(BuildContext context) {
+    context.read<WeatherController>().getWeatherInfo("Nigeria");
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppColors.BACKKGROUND_COLOR,
@@ -59,19 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text("${Constant.WELCOME} ${remember.get("fullname")}", style: TextStyle(fontSize: Dimensions.font20),),
                   TextButton(
                       onPressed: () {
-                        Get.toNamed(RouteHelper.getPasswordPage());
-                      },
-                      child: Text(
-                        Constant.RESET_PASS,
-                        style: TextStyle(
-                            color: AppColors.PRIMARY,
-                            decoration: TextDecoration.underline,
-                            fontSize: Dimensions.font20
-                        ),
-                      )
-                  ),
-                  TextButton(
-                      onPressed: () {
                         Get.toNamed(RouteHelper.getBankPage());
                       },
                       child: Text(
@@ -98,10 +90,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   TextButton(
                       onPressed: () {
-                        Get.toNamed(RouteHelper.getBankPage());
+                        context.read<HomeController>().logout();
                       },
                       child: Text(
-                        Constant.GOTOALARM,
+                        Constant.LOG_OUT,
                         style: TextStyle(
                             color: AppColors.PRIMARY,
                             decoration: TextDecoration.underline,
@@ -111,10 +103,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   TextButton(
                       onPressed: () {
-                        context.read<HomeController>().logout();
+                        Get.toNamed(RouteHelper.getPasswordPage());
                       },
                       child: Text(
-                        Constant.LOG_OUT,
+                        Constant.RESET_PASS,
                         style: TextStyle(
                             color: AppColors.PRIMARY,
                             decoration: TextDecoration.underline,

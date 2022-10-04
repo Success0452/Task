@@ -120,7 +120,7 @@ class _MainScreenState extends State<MainScreen> {
                                     child: Icon(Icons.monetization_on_outlined, color: AppColors.BLACK,),
                                   ),
                                   SizedBox(height: height/200,),
-                                  Text(Constant.INTERTRANS, style: TextStyle(color: AppColors.WHITE, fontSize: width/30),)
+                                  Text(Constant.INTERTRANS, textAlign: TextAlign.center, style: TextStyle(color: AppColors.WHITE, fontSize: width/30,),)
                                 ],
                               ),
                             ),
@@ -138,7 +138,7 @@ class _MainScreenState extends State<MainScreen> {
                                     child: Icon(Icons.monetization_on_outlined, color: AppColors.BLACK,),
                                   ),
                                   SizedBox(height: height/200,),
-                                  Text(Constant.INTRATRANS, style: TextStyle(color: AppColors.WHITE, fontSize: width/30),)
+                                  Text(Constant.INTRATRANS, textAlign: TextAlign.center, style: TextStyle(color: AppColors.WHITE, fontSize: width/30),)
                                 ],
                               ),
                             ),
@@ -156,7 +156,7 @@ class _MainScreenState extends State<MainScreen> {
                                     child: Icon(Icons.monetization_on_outlined, color: AppColors.BLACK,),
                                   ),
                                   SizedBox(height: height/200,),
-                                  Text(Constant.explored, style: TextStyle(color: AppColors.WHITE, fontSize: width/30),)
+                                  Text(Constant.explored, textAlign: TextAlign.center, style: TextStyle(color: AppColors.WHITE, fontSize: width/30),)
                                 ],
                               ),
                             ),
@@ -174,7 +174,7 @@ class _MainScreenState extends State<MainScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: width/18, top: height/30),
-                  child: Text(Constant.portfolio, style: TextStyle( color: AppColors.BLACK, fontSize: width/24),),
+                  child: Text(Constant.dashboard, style: TextStyle( color: AppColors.BLACK, fontSize: width/24),),
                 ),
                 SizedBox(height: height/70,),
                 Container(
@@ -211,7 +211,7 @@ class _MainScreenState extends State<MainScreen> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Text(Constant.johnvents, style: TextStyle(color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
+                                          Text(Constant.multiple, style: TextStyle(color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
                                           SizedBox(width: width/6,),
                                           Text(Constant.people, style: TextStyle(color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
                                         ],
@@ -238,7 +238,7 @@ class _MainScreenState extends State<MainScreen> {
                                           ),
                                         ),
                                         SizedBox(width: width/26,),
-                                        Text(Constant.nineMonth, style: TextStyle(color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
+                                        Text("10 Month", style: TextStyle(color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
                                       ],
                                     )
                                   ],
@@ -296,7 +296,7 @@ class _MainScreenState extends State<MainScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      Text(Constant.johnvents, style: TextStyle( color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
+                                      Text(Constant.multiple, style: TextStyle( color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
                                       Text(Constant.interest, style: TextStyle( color: AppColors.BLACK, fontSize: width/30, fontWeight: FontWeight.bold),),
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -321,7 +321,7 @@ class _MainScreenState extends State<MainScreen> {
                                           )
                                         ],
                                       ),
-                                      Text(Constant.ongoing, style: TextStyle( color: AppColors.BLACK, fontSize: width/28, fontWeight: FontWeight.bold),),
+                                      Text("ongoing", style: TextStyle( color: AppColors.BLACK, fontSize: width/28, fontWeight: FontWeight.bold),),
                                     ],
                                   ),
                                 )

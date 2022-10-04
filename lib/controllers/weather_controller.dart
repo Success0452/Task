@@ -2,8 +2,8 @@
 import 'dart:convert';
 
 import 'package:authentication/model/weather_model.dart';
-import 'package:authentication/server/http_routes.dart';
-import 'package:authentication/server/service.dart';
+import 'package:authentication/services/http_routes.dart';
+import 'package:authentication/services/server.dart';
 import 'package:flutter/material.dart';
 
 class WeatherController extends ChangeNotifier{

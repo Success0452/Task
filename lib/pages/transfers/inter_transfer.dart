@@ -263,7 +263,7 @@ class _TransferPageState extends State<TransferPage> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
-                              Text(Constant.amountTxt, style: TextStyle(color: AppColors.BLACK, fontSize: 14, fontWeight: FontWeight.bold),),
+                              Text("Amount", style: TextStyle(color: AppColors.BLACK, fontSize: 14, fontWeight: FontWeight.bold),),
                               Text(Constant.hundredThousand, style: TextStyle(color: AppColors.BLACK, fontSize: 14, fontWeight: FontWeight.bold),)
                             ],
                           ),
@@ -278,7 +278,7 @@ class _TransferPageState extends State<TransferPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(Constant.validateTxt, style: TextStyle(color: AppColors.BLACK, fontSize: 16),),
+                  const Text("Validate payment with PIN", style: TextStyle(color: AppColors.BLACK, fontSize: 16),),
                   SizedBox(height: Dimensions.screenHeight/60,),
                   Padding(
                     padding: const EdgeInsets.only(left: 65, right: 65),

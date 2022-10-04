@@ -1,4 +1,5 @@
-import 'package:authentication/server/http_routes.dart';
+
+import 'package:authentication/services/http_routes.dart';
 import 'package:http/http.dart' as http;
 
 class Server {

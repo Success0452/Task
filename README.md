@@ -20,9 +20,9 @@
 
 `Login and Registration Functionality with Password Reset.`
 This was acheived through the use of "HIVE" as a backend database to store user information and verify users information when needed,
-with this local database, user can create account, then procced to login into with the details provided upon registration,
-which will the user will be permitted to access app functionality only if and if the details are right. user get to be notified of any error
-that occurs anytime of execution
+with this local database, user can create account, then proceed to login with the details provided upon registration,
+then the user will be permitted to access app functionality only if the details are right. user get to be notified of any error
+that occurs during execution
 
 `InterBank and IntraBank Transfer functionality.`
 This is an execution of exhibiting bank transfer process flow UI implementation, and according to the requested flow, the UI
@@ -35,6 +35,7 @@ and these data are been requested with http, the point of connection was establi
 `A Sunrise and Sunset Alarm.`
 Alarm implementation is been done with the use of android_alarm_manager package, time was passed to specify wen the alarm needs
 to go off, since its sunrise and sunset then the time was the range of 6:00am and 6:pm. so alarm is set trigger during these set time.
+to compliment the alarm implementation, notification was implemented to come up as soon as the alarm comes up.
 
 `How to Clone this Project`
 
