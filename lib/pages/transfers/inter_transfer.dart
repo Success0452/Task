@@ -1,3 +1,4 @@
+import 'package:authentication/controllers/home_controller.dart';
 import 'package:authentication/controllers/login_controller.dart';
 import 'package:authentication/routes/route.dart';
 import 'package:authentication/util/colors.dart';
@@ -23,6 +24,7 @@ class _TransferPageState extends State<TransferPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         toolbarHeight: Dimensions.height40 * 2,
@@ -146,12 +148,12 @@ class _TransferPageState extends State<TransferPage> {
             ),
             SizedBox(height: Dimensions.height30,),
             AppTextField(
-                textEditingController: context.read<LoginController>().InputPhoneNumber,
+                textEditingController: context.read<HomeController>().amount,
                 hintText: Constant.AMOUNT
             ),
             SizedBox(height: Dimensions.height30,),
             AppTextField(
-                textEditingController: context.read<LoginController>().InputPhoneNumber,
+                textEditingController: context.read<HomeController>().receive_account,
                 hintText: Constant.RECEIVERACCOUNT
             ),
             SizedBox(height: Dimensions.height20,),
@@ -166,7 +168,7 @@ class _TransferPageState extends State<TransferPage> {
             ),
             SizedBox(height: Dimensions.height10,),
             AppTextField(
-                textEditingController: context.read<LoginController>().InputPassword,
+                textEditingController: context.read<HomeController>().purpose,
                 hintText: Constant.PURPOSE
             ),
             SizedBox(height: Dimensions.height10,),
