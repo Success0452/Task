@@ -5,9 +5,6 @@
 
 `task` : `Flutter Project Based Code`
 
-`Purpose of this Project`:
-- This project is designed to meet specific requirements for assessment.
-
 `Task includes`
 - Login and Registration Functionality with Password Reset.
 - InterBank and IntraBank Transfer functionality (Layout and Process Flow Screens Only).
